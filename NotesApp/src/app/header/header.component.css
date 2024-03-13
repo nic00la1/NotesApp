@@ -1,0 +1,4 @@
+h1 {
+    background: rgb(228,144,202);
+    background: linear-gradient(90deg, rgba(228,144,202,1) 0%, rgba(78,180,235,1) 100%);
+}
