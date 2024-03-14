@@ -6,9 +6,6 @@ button {
     margin: 1.6rem;
 }
 
-.card:not(:first-child) {
-    margin-top: 1.15rem;
-}
 
 /* 
     The following code is used to add a background image to the card body.
@@ -44,8 +41,9 @@ button {
     background-image: url('/assets/images/cat.png');
     background-size: cover;
     background-position: center;
-    opacity: 0.5;
+    opacity: 0.3;
 }
+
 
 .card-body{
     position: relative;

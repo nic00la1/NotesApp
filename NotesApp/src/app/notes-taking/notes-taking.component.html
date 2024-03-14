@@ -1,5 +1,5 @@
 <div class="container d-flex flex-row m-5">
-  <form class="w-50">
+  <form class="w-50" (ngSubmit)="addNote(title.value, content.value)">
     <div class="form-group">
       <label>Tytul</label>
       <input type="text" class="form-control mt-2" #title required>
@@ -8,13 +8,13 @@
       <label>Opis</label>
       <textarea class="form-control" rows="3" #content required></textarea>
     </div>
-    <button type="submit" class="btn btn-primary mt-2" (click)="addNote(title.value, content.value)">Add Note</button>
+    <button type="submit" class="btn btn-primary mt-2">Add Note</button>
   </form>
   
   <!-- Wyswietlenie notatek:  -->
   <div class="notes-display d-flex flex-column">
     @for (note of notes; track note) {
-      <div class="card shadow" style="width: 18rem;">
+      <div class="card shadow m-3" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">{{note.title}}</h5>
           <p class="card-text">{{note.content}}</p>
