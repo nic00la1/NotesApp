@@ -22,5 +22,9 @@ export class NotesTakingComponent {
     // Add the new note to the list
     this.notes.push(newNote);
   }
+
+  deleteNote(note: Note) {
+    this.notes = this.notes.filter(n => n !== note);
+  }
 }
 
