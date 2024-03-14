@@ -18,7 +18,7 @@
         <div class="card-body">
           <h5 class="card-title">{{note.title}}</h5>
           <p class="card-text">{{note.content}}</p>
-          <a href="#" class="btn btn-primary">Edit</a>
+          <a href="#" class="btn btn-primary me-2" (click)="editNote(note, title.value, content.value)">Edit</a>
           <a href="#" class="btn btn-danger" (click)="deleteNote(note)">Delete</a>
         </div>
       </div>

@@ -26,5 +26,27 @@ export class NotesTakingComponent {
   deleteNote(note: Note) {
     this.notes = this.notes.filter(n => n !== note);
   }
+
+  editNote(note: Note, title: string, content: string) {
+    note.title = title; 
+    note.content = content; // 
+
+    const updatedNotes = [...this.notes]; // copy the array
+    const newTitle = prompt('Wprowadz nowa nazwe:');
+    const newContent = prompt('Wprowadz nowy opis:');
+
+    if (newTitle && newContent) { // if the user didn't cancel
+      note.title = newTitle;
+      note.content = newContent;
+
+      const index = updatedNotes.findIndex(n => n === note);
+      if (index !== -1) {
+        const updatedNote = { ...note, title: newTitle, content: newContent };
+        updatedNotes[index] = updatedNote;
+        this.notes = updatedNotes;
+      }
+    }
+   
+  }
 }
 
