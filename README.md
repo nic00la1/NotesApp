@@ -1,5 +1,7 @@
 # NotesApp with Angular 👀✨
 <div algin="center">
-  ![NotesApp](https://github.com/nic00la1/NotesApp/assets/99048749/e591c129-a1c8-4c41-a045-a145ae2e5ee9)
+  
+ ![NotesApp](https://github.com/nic00la1/NotesApp/assets/99048749/29d178b3-e72d-4eae-917f-3023b3c5241a)
+
 
 </div>
