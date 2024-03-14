@@ -1,24 +1,29 @@
-<form class="w-25">
-  <div class="form-group">
-    <label for="noteTitle">Title</label>
-    <input type="text" class="form-control" placeholder="Enter title" required #title>
-  </div>
-  <div class="form-group">
-    <label for="noteContent">Content</label>
-    <textarea class="form-control" placeholder="Opis notatki" rows="3" required #content></textarea>
-  </div>
-  <button type="submit" class="btn btn-primary" (click)="addNote(title.value, content.value)">Add Note</button>
-</form>
-
-<!-- Wyswietlenie notatek:  -->
-@for (note of notes; track note) {
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">{{note.title}}</h5>
-      <p class="card-text">{{note.content}}</p>
-      <a href="#" class="btn btn-primary">Edit</a>
-      <a href="#" class="btn btn-danger">Delete</a>
+<div class="container d-flex flex-row">
+  <form class="w-50">
+    <div class="form-group">
+      <label>Title</label>
+      <input type="text" class="form-control" placeholder="Enter title" required #title>
     </div>
+    <div class="form-group">
+      <label>Content</label>
+      <textarea class="form-control" placeholder="Opis notatki" rows="3" required #content></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="addNote(title.value, content.value)">Add Note</button>
+  </form>
+  
+  <!-- Wyswietlenie notatek:  -->
+  <div class="notes-display d-flex flex-column">
+    @for (note of notes; track note) {
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{note.title}}</h5>
+          <p class="card-text">{{note.content}}</p>
+          <a href="#" class="btn btn-primary">Edit</a>
+          <a href="#" class="btn btn-danger">Delete</a>
+        </div>
+      </div>
+    }
   </div>
-}
+</div>
+
 
