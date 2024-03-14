@@ -2,3 +2,10 @@ button {
     background-color: rgb(228,144,202);
 }
 
+.notes-display {
+    margin: 1.6rem;
+}
+
+.card:not(:first-child) {
+    margin-top: 1.15rem;
+}
