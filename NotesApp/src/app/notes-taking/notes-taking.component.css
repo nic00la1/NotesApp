@@ -9,3 +9,28 @@ button {
 .card:not(:first-child) {
     margin-top: 1.15rem;
 }
+
+/* 
+    The following code is used to add a background image to the card body.
+    The image is a semi-transparent cat image.
+
+*/
+
+.card::before {  
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/images/cat.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+}
+
+.card-body{
+    position: relative;
+    z-index: 1;
+}
+

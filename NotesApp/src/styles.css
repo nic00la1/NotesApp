@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Angkor-Regular';
+    src: url(./assets/fonts/Angkor-Regular.ttf);
+}
+
+body {
+    font-family: 'Angkor-Regular', sans-serif;
+}

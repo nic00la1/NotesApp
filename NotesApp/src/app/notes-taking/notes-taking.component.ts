@@ -15,6 +15,12 @@ export class NotesTakingComponent {
   notes: Note[] = [];
   
   addNote(title: string, content: string) {
+    if (!title.trim() || !content.trim()) {
+      // Don't add the note if title or content are empty
+      alert('Wszystkie pola musza byc wypelnione!');
+      return;
+    }
+  
     const id = this.notes.length + 1; // or however you generate ids
     const date = new Date();
     const newNote = new Note(id, title, content, date);
